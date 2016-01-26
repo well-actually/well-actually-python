@@ -13,7 +13,15 @@ replacements = [
     (re.compile(r"IndexError:"),
      r"Well, actually that index is out of range (IndexError)"),
     (re.compile(r"SyntaxError:"),
-     r"Well, actually you have the wrong syntax"),
+     r"Well, actually you have the wrong syntax (SyntaxError)"),
+    (re.compile(r"TypeError: unsupported operand type\(s\) for (.+): '(.*)' and '(.*)'"),
+     r"Well actually, you can't use \1 on \2 and \3 (TypeError)"),
+    (re.compile(r"TypeError: can only concatenate (.*) \(not \"(.*)\"\) to (.*)"),
+     r"You're trying to concatenate \1 and \2 but you actually can't do that (TypeError)"),
+    (re.compile(r"AttributeError: '(.*)' object has no attribute '(.*)'"),
+     r"Well, \1 actually doesn't even have any attribute called \2"),
+    (re.compile(r"AttributeError: can't set attribute"),
+     r"Well actually you aren't allowed to set that attribute")
 ]
 
 py = Popen(['python'] + sys.argv[1:], stdin=sys.stdin,
