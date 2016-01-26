@@ -7,13 +7,13 @@ import re
 
 replacements = [
     (re.compile(r"NameError: name '(.*)'"),
-     r"Um, actually '\1' is not defined (NameError)"),
+     r"Well, actually '\1' is not defined (NameError)"),
     (re.compile(r"Exception: (.*)"),
-     r"Um, actually, \1 (Exception)"),
+     r"Well, actually, \1 (Exception)"),
     (re.compile(r"IndexError:"),
-     r"Um, actually that index is out of range (IndexError)"),
+     r"Well, actually that index is out of range (IndexError)"),
     (re.compile(r"SyntaxError:"),
-     r"Um, actually you have the wrong syntax"),
+     r"Well, actually you have the wrong syntax"),
 ]
 
 py = Popen(['python'] + sys.argv[1:], stdin=sys.stdin,

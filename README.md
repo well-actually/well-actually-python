@@ -1,9 +1,9 @@
-# Um Actually for Python
+# Well Actually for Python
 This rando wants to lecture you on your uncaught exceptions!
 
 In [this tweet][] I was inspired to make compile and runtime errors more annoying.
 This is a wrapper around the Python interpreter that replaces exceptions in a stack
-trace with more annoying messages written in an "um, actually" format.
+trace with more annoying messages written in a "well, actually" format.
 
 [this tweet]: https://twitter.com/porglezomp/status/691748485700395009
 
